@@ -131,7 +131,7 @@ class EcostressCloudAPI:
             start_date += timedelta(days=1)
         return day_urls
 
-    def download(self, start_date: datetime, end_date: datetime, bbox: List[int], output_dir: str) -> List[Tuple[str, str, str]]:
+    def download(self, start_date: datetime, end_date: datetime, bbox: List[int], output_dir: str):
         day_urls = self._create_day_urls(start_date, end_date)
         file_links = []
         for day_url in day_urls:
