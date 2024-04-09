@@ -27,7 +27,7 @@ jobs:
     
     - name: Run unit tests
       run: |
-        docker run --rm esiil/ci_cd_demo:latest python -m unittest discover tests/
+        docker run --rm esiil/ci_cd_demo:latest bash -c "source activate ci_cd_demo && python -m unittest discover tests/"
      
     - name: Push Docker image
       if: success()

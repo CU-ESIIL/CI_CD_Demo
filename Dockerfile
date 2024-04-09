@@ -4,6 +4,8 @@ USER root
 
 COPY . .
 
+RUN chown -R jovyan .
+
 RUN rm -rf .git .gitignore
 
 # Set up package manager
