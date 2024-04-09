@@ -134,15 +134,12 @@ class EcostressCloudAPI:
 
     def download(self, start_date: datetime, end_date: datetime, bbox: List[int], output_dir: str) -> List[Tuple[str, str, str]]:
         day_urls = self._create_day_urls(start_date, end_date)
-        print(day_urls)
         file_links = []
         for day_url in day_urls:
-            print(day_url)
             file_urls = self.retrieve_links(day_url)
             for file_url in file_urls:
                 link = urllib.parse.urljoin(day_url, file_url)
                 file_date = self._parse_datetime_from_file_name(file_url)
-                print(file_date)
                 if file_date is not None and start_date <= file_date <= end_date and self._overlaps_bbox(bbox, link + '.xml'):
                     file_links.append(link)
 
