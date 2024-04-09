@@ -1,0 +1,7 @@
+name: ci_cd_demo
+channels:
+  - conda-forge
+dependencies:
+  - requests
+  - beautifulsoup4
+  - shapely
