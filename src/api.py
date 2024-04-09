@@ -20,7 +20,6 @@ class EcostressCloudAPI:
     _BASE_CLOUD_URL = 'https://e4ftl01.cr.usgs.gov/ECOSTRESS/ECO2CLD.001/'
     _XML_DIR = os.path.join(PROJ_DIR, 'xml_files')
 
-
     def __init__(self):
         self._username, self._password = self._cred_query()
         self._file_re = r'ECOSTRESS\_L2\_CLOUD\_(?P<orbit>\d{5})\_(?P<scene_id>\d{3})\_(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})T(?P<hour>\d{2})(?P<minute>\d{2})(?P<second>\d{2})\_(?P<build_id>\d{4})\_(?P<version>\d{2})\.h5$'
