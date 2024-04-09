@@ -91,7 +91,7 @@ class EcostressCloudAPI:
         file_path = os.path.join(self._XML_DIR, filename)
 
         if not os.path.exists(file_path):
-            self.download((xml_url, file_path))
+            self._download((xml_url, file_path))
 
         # Parse the XML content
         root = ET.fromstring(open(file_path, 'rb').read())
