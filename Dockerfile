@@ -70,4 +70,4 @@ RUN conda update -y conda && \
 WORKDIR /home/jovyan
 COPY environment.yml /home/jovyan/
 RUN mamba env create -f /home/jovyan/environment.yml
-RUN . /opt/conda/etc/profile.d/conda.sh && conda deactivate && conda activate hyr-sense && python -m ipykernel install --name hyr-sense && pip install jupyter_contrib_nbextensions
+RUN . /opt/conda/etc/profile.d/conda.sh && conda deactivate && conda activate ci_cd_demo && python -m ipykernel install --name ci_cd_demo && pip install jupyter_contrib_nbextensions
