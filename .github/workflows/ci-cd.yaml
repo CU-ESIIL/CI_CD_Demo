@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
     
     - name: Build Docker image
-      run: docker build -t your-image-name esiil/ci_cd_demo:latest
+      run: docker build -t esiil/ci_cd_demo:latest .
     
     - name: Run unit tests
       run: |
