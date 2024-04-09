@@ -44,10 +44,7 @@ RUN conda install -c conda-forge \
     jupyter_client \
     jupyter_core \
     jupyterlab_server \
-    jupyter_server \
-    r-rgl \
-    r-htmlwidgets \
-    r-htmltools && \
+    jupyter_server && \
     jupyter lab clean
 
 # Install Jupyter Lab Proxy extensions (cards in Launcher)

@@ -1,7 +1,32 @@
 name: ci_cd_demo
 channels:
   - conda-forge
+  - defaults
+  
 dependencies:
   - requests
   - beautifulsoup4
   - shapely
+
+  - pip:
+      - affine==2.4.0
+      - aiosignal==1.3.1
+      - appdirs==1.4.4
+      - attrs==23.1.0
+      - certifi==2023.7.22
+      - charset-normalizer==3.1.0
+      - click==8.1.3
+      - click-plugins==1.1.1
+      - cligj==0.7.2
+
+  # Jupyter Lab Environment & Kernel
+  - papermill
+  - autopep8
+  - jupyterlab
+  - notebook
+  - ipython
+  - nbclean
+  - nbresuse
+  - jupyterlab-geojson
+  - nb_conda_kernels
+  - ipykernel
